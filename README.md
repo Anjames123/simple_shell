@@ -317,3 +317,13 @@ In this mode, the shell should not print a prompt and should not read from stdin
 Repo:
 
 GitHub repository: simple_shell
+
+
+            
+                           AUTHORS
+
+            @Anjames123 Ajibade Aanuoluwa James
+                            
+                             AND
+
+            @kenimsworld Ekenimeno Akpaiya
