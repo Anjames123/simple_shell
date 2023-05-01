@@ -1,11 +1,15 @@
 #include "shell.h"
 
 /**
- * _myhistory - displays the history list, one command by line, preceded
- *              with line numbers, starting at 0.
- * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
- *  Return: Always 0
+ * display_history - displays the history list of
+ * previously executed commands
+ * @info: structure containing potential arguments (unused)
+ *
+ * This function displays the history list of previously
+ * executed commands, with each command
+ * on a separate line and preceded by a line number
+ * starting at 0. The function doesn't return
+ * anything, but it prints the history list to standard output.
  */
 int _myhistory(info_t *info)
 {
@@ -14,12 +18,19 @@ int _myhistory(info_t *info)
 }
 
 /**
- * unset_alias - sets alias to string
- * @info: parameter struct
- * @str: the string alias
+ * unset_alias - removes an alias that has been previously
+ * set to a string value
+ * @info: structure containing information about the command to be executed
+ * @str: the string value of the alias to be removed
  *
- * Return: Always 0 on success, 1 on error
+ * This function removes an alias that has been previously
+ * set to a string value. It
+ * returns 0 if the alias was successfully removed,
+ * and 1 if an error occurred.
+ *
+ * Return: 0 on success, 1 on error
  */
+
 int unset_alias(info_t *info, char *str)
 {
 	char *p, c;
@@ -37,12 +48,19 @@ int unset_alias(info_t *info, char *str)
 }
 
 /**
- * set_alias - sets alias to string
- * @info: parameter struct
- * @str: the string alias
+ * set_alias - sets an alias to a string value
+ * @info: structure containing information
+ * about the command to be executed
+ * @alias: the name of the alias to be set
+ * @value: the string value of the alias
  *
- * Return: Always 0 on success, 1 on error
+ * This function sets an alias to a string value.
+ * It returns 0 if the alias was successfully
+ * set, and 1 if an error occurred.
+ *
+ * Return: 0 on success, 1 on error
  */
+
 int set_alias(info_t *info, char *str)
 {
 	char *p;
@@ -61,7 +79,10 @@ int set_alias(info_t *info, char *str)
  * print_alias - prints an alias string
  * @node: the alias node
  *
- * Return: Always 0 on success, 1 on error
+ * This function prints the name and value of an alias.
+ * It returns 0 on success, and 1 on error.
+ *
+ * Return: 0 on success, 1 on error
  */
 int print_alias(list_t *node)
 {
@@ -81,10 +102,15 @@ int print_alias(list_t *node)
 }
 
 /**
- * _myalias - mimics the alias builtin (man alias)
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
- *  Return: Always 0
+ * _myalias - mimics the alias built-in command
+ * @info: structure containing information about
+ * the command to be executed
+ *
+ * This function mimics the behavior of the alias
+ * built-in command. It can be used to set,
+ * unset, or print aliases.
+ *
+ * Return: Always 0
  */
 int _myalias(info_t *info)
 {

@@ -7,6 +7,7 @@
  *  Return: exits with a given exit status
  *         (0) if info.argv[0] != "exit"
  */
+
 int _myexit(info_t *info)
 {
 	int exitcheck;
@@ -30,11 +31,17 @@ int _myexit(info_t *info)
 }
 
 /**
- * _mycd - changes the current directory of the process
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
- *  Return: Always 0
+ * _mycd - change the current directory of the process
+ *
+ * @info: structure containing potential arguments
+ *        Used to maintain constant function prototype.
+ *
+ * This function changes the current working directory of the process,
+ * using information contained in a structure named `info`.
+ *
+ * Return: This function always returns 0 to indicate success.
  */
+
 int _mycd(info_t *info)
 {
 	char *s, *dir, buffer[1024];
@@ -80,11 +87,17 @@ int _mycd(info_t *info)
 }
 
 /**
- * _myhelp - changes the current directory of the process
- * @info: Structure containing potential arguments. Used to maintain
- *          constant function prototype.
- *  Return: Always 0
+ * _myhelp - display help information for the shell
+ *
+ * @info: structure containing potential arguments
+ *        Used to maintain constant function prototype.
+ *
+ * This function displays help information for the shell, using information
+ * contained in a structure named `info`.
+ *
+ * Return: This function always returns 0 to indicate success.
  */
+
 int _myhelp(info_t *info)
 {
 	char **arg_array;

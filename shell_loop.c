@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * hsh - main shell loop
- * @info: the parameter & return info struct
+ * hsh - function that implements the main shell loop
+ * @info: a struct containing information about the shell
  * @av: the argument vector from main()
  *
  * Return: 0 on success, 1 on error, or error code
@@ -44,14 +44,15 @@ int hsh(info_t *info, char **av)
 }
 
 /**
- * find_builtin - finds a builtin command
- * @info: the parameter & return info struct
+ * find_builtin-in command in the list of available built-ins and execute it.
  *
- * Return: -1 if builtin not found,
- * 0 if builtin executed successfully,
- * 1 if builtin found but not successful,
- * 2 if builtin signals exit()
+ * @info: Pointer to the parameter & return info struct.
+ *
+ * Return: -1 if the built-in command is not found,
+ * 0 if it is found and executed successfully,
+ * 1 if it is found but not successful, or 2 if it signals an exit.
  */
+
 int find_builtin(info_t *info)
 {
 	int i, built_in_ret = -1;
@@ -78,7 +79,7 @@ int find_builtin(info_t *info)
 }
 
 /**
- * find_cmd - finds a command in PATH
+ * find_cmd - search for a command in the directories listed in PATH
  * @info: the parameter & return info struct
  *
  * Return: void
@@ -120,8 +121,12 @@ void find_cmd(info_t *info)
 }
 
 /**
- * fork_cmd - forks a an exec thread to run cmd
+ * fork_cmd - forks a new process to run a command
  * @info: the parameter & return info struct
+ *
+ * This function creates a child process to execute the command.
+ * The child process calls execve() to replace itself with the command.
+ * The parent process waits for the child to complete.
  *
  * Return: void
  */

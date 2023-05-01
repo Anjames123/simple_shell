@@ -1,12 +1,15 @@
 #include "shell.h"
 
 /**
- **_strncpy - copies a string
- *@dest: the destination string to be copied to
- *@src: the source string
- *@n: the amount of characters to be copied
- *Return: the concatenated string
+ * _strncpy - Copy a string to a specified length
+ *
+ * @dest: The destination string to copy to
+ * @src: The source string to copy from
+ * @n: The number of characters to copy
+ *
+ * Return: The resulting concatenated string.
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i, j;
@@ -31,12 +34,22 @@ char *_strncpy(char *dest, char *src, int n)
 }
 
 /**
- **_strncat - concatenates two strings
- *@dest: the first string
- *@src: the second string
- *@n: the amount of bytes to be maximally used
- *Return: the concatenated string
+ * _strncpy - Copy a string to a specified length
+ *
+ * @dest: The destination string to copy to
+ * @src: The source string to copy from
+ * @n: The number of characters to copy
+ *
+ * Return: The resulting concatenated string.
+ *
+ * Description: The function copies up to `n`
+ * characters from the source string
+ * `src` to the destination string `dest`.
+ * If the length of `src` is less than
+ * `n`, the remainder of `dest` will be
+ * filled with null characters ('\0').
  */
+
 char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;

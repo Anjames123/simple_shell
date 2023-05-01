@@ -1,13 +1,14 @@
 #include "shell.h"
 
 /**
- * input_buf - buffers chained commands
- * @info: parameter struct
- * @buf: address of buffer
- * @len: address of len var
+ * input_buf - Read input from user and buffer chained commands
+ * @info: Parameter struct
+ * @buf: Address of buffer to store input
+ * @len: Address of len variable to store length of input
  *
- * Return: bytes read
+ * Return: The number of bytes read from user input.
  */
+
 ssize_t input_buf(info_t *info, char **buf, size_t *len)
 {
 	ssize_t r = 0;
@@ -45,11 +46,15 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input - gets a line minus the newline
- * @info: parameter struct
+ * get_input - Reads a line of input from standard input and stores it in
+ *             the input buffer of the info struct. The newline character is
+ *             removed from the end of the input.
  *
- * Return: bytes read
+ * @info: A pointer to the info struct that holds the input buffer.
+ *
+ * Return: The number of characters read, or -1 on failure.
  */
+
 ssize_t get_input(info_t *info)
 {
 	static char *buf; /* the ';' command chain buffer */

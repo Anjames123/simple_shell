@@ -13,10 +13,14 @@ void clear_info(info_t *info)
 }
 
 /**
- * set_info - initializes info_t struct
- * @info: struct address
- * @av: argument vector
+ * set_info - Initialize an info_t struct
+ *
+ * @info: Pointer to the info_t struct to be initialized
+ * @av: Argument vector
+ *
+ * Return: void
  */
+
 void set_info(info_t *info, char **av)
 {
 	int i = 0;
@@ -45,10 +49,14 @@ void set_info(info_t *info, char **av)
 }
 
 /**
- * free_info - frees info_t struct fields
- * @info: struct address
- * @all: true if freeing all fields
+ * free_info - Frees the allocated memory for fields of info_t struct
+ *
+ * @info: Pointer to the info_t struct
+ * @all: Boolean indicating if all fields should be freed
+ *
+ * Return: Nothing
  */
+
 void free_info(info_t *info, int all)
 {
 	ffree(info->argv);

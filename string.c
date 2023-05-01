@@ -2,9 +2,9 @@
 
 /**
  * _strlen - returns the length of a string
- * @s: the string whose length to check
+ * @s: the string to be measured
  *
- * Return: integer length of string
+ * Return: the length of the string as an integer
  */
 int _strlen(char *s)
 {
@@ -19,11 +19,13 @@ int _strlen(char *s)
 }
 
 /**
- * _strcmp - performs lexicogarphic comparison of two strangs.
- * @s1: the first strang
- * @s2: the second strang
+ * _strcmp - compares two strings
+ * @s1: the first string to compare
+ * @s2: the second string to compare
  *
- * Return: negative if s1 < s2, positive if s1 > s2, zero if s1 == s2
+ * Return: negative value if s1 is less than s2,
+ * positive value if s1 is greater than s2,
+ *         and 0 if s1 is equal to s2
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -45,7 +47,9 @@ int _strcmp(char *s1, char *s2)
  * @haystack: string to search
  * @needle: the substring to find
  *
- * Return: address of next char of haystack or NULL
+ * Return: pointer to next character of haystack
+ * if needle is found at the beginning, 
+ * otherwise NULL
  */
 char *starts_with(const char *haystack, const char *needle)
 {

@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * get_history_file - gets the history file
- * @info: parameter struct
+ * get_history_file - Get the path of the history file
+ * @info: Parameter struct containing shell information
  *
- * Return: allocated string containg history file
+ * Return: A dynamically allocated string containing the path to the history file.
  */
 
 char *get_history_file(info_t *info)
@@ -25,11 +25,15 @@ char *get_history_file(info_t *info)
 }
 
 /**
- * write_history - creates a file, or appends to an existing file
- * @info: the parameter struct
+ * write_history - write a command history to a file
+ * @info: a parameter struct
  *
- * Return: 1 on success, else -1
+ * This function creates a file, or appends to an existing file,
+ * containing a command history of the current shell session.
+ *
+ * Return: On success, return 1, otherwise return -1.
  */
+
 int write_history(info_t *info)
 {
 	ssize_t fd;
@@ -54,10 +58,11 @@ int write_history(info_t *info)
 }
 
 /**
- * read_history - reads history from file
- * @info: the parameter struct
+ * read_history - Reads history from file
  *
- * Return: histcount on success, 0 otherwise
+ * @info: Pointer to a parameter struct
+ *
+ * Return: The number of history entries read, or 0 on failure
  */
 int read_history(info_t *info)
 {

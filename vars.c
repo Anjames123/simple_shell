@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * is_chain - test if current char in buffer is a chain delimeter
- * @info: the parameter struct
- * @buf: the char buffer
- * @p: address of current position in buf
+ * is_chain - checks if the current character in a buffer is a chain delimiter
+ * @info: the parameter and return info struct
+ * @buf: the character buffer
+ * @p: pointer to the current position in the buffer
  *
- * Return: 1 if chain delimeter, 0 otherwise
+ * Return: 1 if the current character is a chain delimiter, 0 otherwise
  */
 int is_chain(info_t *info, char *buf, size_t *p)
 {
@@ -36,14 +36,14 @@ int is_chain(info_t *info, char *buf, size_t *p)
 }
 
 /**
- * check_chain - checks we should continue chaining based on last status
+ * check_chain - checks whether to continue chaining based on the last status
  * @info: the parameter struct
  * @buf: the char buffer
  * @p: address of current position in buf
  * @i: starting position in buf
  * @len: length of buf
  *
- * Return: Void
+ * Return: void
  */
 void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 {

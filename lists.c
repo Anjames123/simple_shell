@@ -1,13 +1,15 @@
 #include "shell.h"
 
 /**
- * add_node - adds a node to the start of the list
- * @head: address of pointer to head node
- * @str: str field of node
- * @num: node index used by history
+ * add_node - Adds a new node to the beginning of a linked list.
  *
- * Return: size of list
+ * @head: Pointer to the address of the head node.
+ * @str: The string to be stored in the new node.
+ * @num: The index of the new node (used by the history feature).
+ *
+ * Return: The size of the updated list.
  */
+
 list_t *add_node(list_t **head, const char *str, int num)
 {
 	list_t *new_head;
@@ -34,13 +36,15 @@ list_t *add_node(list_t **head, const char *str, int num)
 }
 
 /**
- * add_node_end - adds a node to the end of the list
- * @head: address of pointer to head node
- * @str: str field of node
- * @num: node index used by history
+ * add_node_end - Adds a node to the end of the list
  *
- * Return: size of list
+ * @head: Address of pointer to head node
+ * @str: The string to be added to the node
+ * @num: The index of the node used by history
+ *
+ * Return: The size of the list.
  */
+
 list_t *add_node_end(list_t **head, const char *str, int num)
 {
 	list_t *new_node, *node;
@@ -80,6 +84,7 @@ list_t *add_node_end(list_t **head, const char *str, int num)
  *
  * Return: size of list
  */
+
 size_t print_list_str(const list_t *h)
 {
 	size_t i = 0;
@@ -136,9 +141,13 @@ int delete_node_at_index(list_t **head, unsigned int index)
 
 /**
  * free_list - frees all nodes of a list
- * @head_ptr: address of pointer to head node
+ * @head_ptr: pointer to a pointer to the head node
  *
- * Return: void
+ * This function frees all the nodes of a linked
+ * list starting from the head node.
+ * It first iterates through the list and
+ * frees each node one by one.
+ * It sets the head pointer to NULL after freeing all the nodes.
  */
 void free_list(list_t **head_ptr)
 {

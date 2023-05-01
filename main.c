@@ -1,12 +1,13 @@
 #include "shell.h"
 
 /**
- * main - entry point
- * @ac: arg count
- * @av: arg vector
+ * main - the entry point of the program
+ * @ac: the number of arguments passed to the program
+ * @av: an array of strings containing the arguments
  *
  * Return: 0 on success, 1 on error
  */
+
 int main(int ac, char **av)
 {
 	info_t info[] = { INFO_INIT };

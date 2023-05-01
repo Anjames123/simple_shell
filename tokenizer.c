@@ -3,7 +3,8 @@
 /**
  * **strtow - splits a string into words. Repeat delimiters are ignored
  * @str: the input string
- * @d: the delimeter string
+ * @d: the delimiter string
+ *
  * Return: a pointer to an array of strings, or NULL on failure
  */
 
@@ -50,9 +51,15 @@ char **strtow(char *str, char *d)
 
 /**
  * **strtow2 - splits a string into words
- * @str: the input string
- * @d: the delimeter
- * Return: a pointer to an array of strings, or NULL on failure
+ * @str: the input string to be split
+ * @d: the delimiter used to split the input string
+ * 
+ * This function splits the input string into multiple smaller strings,
+ * where each smaller string is separated by the given delimiter. The
+ * delimiter character itself is not included in the smaller strings.
+ * 
+ * Return: a pointer to an array of strings representing the smaller
+ * strings, or NULL on failure.
  */
 char **strtow2(char *str, char d)
 {

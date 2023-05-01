@@ -1,10 +1,13 @@
 #include "shell.h"
 
 /**
- * interactive - returns true if shell is interactive mode
- * @info: struct address
+ * check_interactive_mode - checks if the shell is running in interactive mode
+ * 
+ * This function checks whether the shell is running in interactive mode, which typically
+ * means that the shell is being used in a way that allows user input and output, and provides
+ * a command prompt for the user to enter commands.
  *
- * Return: 1 if interactive mode, 0 otherwise
+ * Return: 1 if the shell is in interactive mode, 0 otherwise
  */
 int interactive(info_t *info)
 {
@@ -12,11 +15,17 @@ int interactive(info_t *info)
 }
 
 /**
- * is_delim - checks if character is a delimeter
- * @c: the char to check
- * @delim: the delimeter string
- * Return: 1 if true, 0 if false
+ * check_if_delimiter - checks if a character is a delimiter
+ * @character: the character to check
+ * @delimiter_string: the string of delimiters to compare against
+ *
+ * This function checks whether a given character is a delimiter, by comparing it against
+ * a string of delimiters. If the character is found in the delimiter string, the function
+ * returns 1. Otherwise, it returns 0.
+ *
+ * Return: 1 if the character is a delimiter, 0 otherwise.
  */
+
 int is_delim(char c, char *delim)
 {
 	while (*delim)
@@ -26,9 +35,14 @@ int is_delim(char c, char *delim)
 }
 
 /**
- * _isalpha - checks for alphabetic character
- * @c: The character to input
- * Return: 1 if c is alphabetic, 0 otherwise
+ * is_alpha - checks if a character is alphabetic
+ * @character: the character to check
+ *
+ * This function checks whether a given character is an alphabetic character. If the character
+ * is a letter in the alphabet (i.e., an uppercase or lowercase letter), the function returns 1.
+ * Otherwise, it returns 0.
+ *
+ * Return: 1 if the character is alphabetic, 0 otherwise.
  */
 
 int _isalpha(int c)
@@ -40,9 +54,14 @@ int _isalpha(int c)
 }
 
 /**
- * _atoi - converts a string to an integer
- * @s: the string to be converted
- * Return: 0 if no numbers in string, converted number otherwise
+ * convert_string_to_int - converts a string to an integer
+ * @string: the string to be converted
+ *
+ * This function converts a string of characters to an integer value. If the input string
+ * contains no numbers, the function returns 0. Otherwise, the function returns the converted
+ * integer value.
+ *
+ * Return: The converted integer value if successful, 0 otherwise.
  */
 
 int _atoi(char *s)

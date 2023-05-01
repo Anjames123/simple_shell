@@ -2,10 +2,13 @@
 
 /**
  * _strcpy - copies a string
- * @dest: the destination
- * @src: the source
+ * @dest: the destination string
+ * @src: the source string
  *
- * Return: pointer to destination
+ * This function copies the string pointed to by @src to the buffer pointed to
+ * by @dest, including the terminating null byte ('\0').
+ *
+ * Return: pointer to the destination buffer @dest.
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -46,10 +49,16 @@ char *_strdup(const char *str)
 }
 
 /**
- * _puts - prints an input string
+ * _puts - prints a string to the standard output
  * @str: the string to be printed
  *
- * Return: Nothing
+ * This function prints the characters of the
+ * input string to the standard output
+ * until it reaches the terminating null character.
+ * It does not print the null
+ * character itself.
+ *
+ * Return: void
  */
 void _puts(char *str)
 {
